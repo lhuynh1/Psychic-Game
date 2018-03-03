@@ -15,24 +15,73 @@
 
 
 <body>
+
+<canvas id="canvas" width="80%" height="80%"></canvas>
     
-    <div class="jumbotron container">
-<!-- div id of "game" holds the entire contents of html elements that links with JS file-->
-       <div id="game">
+<div class="container">
+    <!-- row for game title -->
+    <div id="game-title" class="row">
+
+        <div class="col-md-2 col-sm-12">
+        <img id="hand" src="assets/images/hand.jpg">
+        </div>
+
+        <div class="col-md-8 col-sm-12">
         <h1>The Psychic Game</h1>
-      
-        <br>
+        </div>
 
-        <p><h2>Guess what letter I'm thinking of:</h2></p>
-        <br>
+        <div class="col-md-2 col-sm-12">
+        <img id="moon" src="assets/images/moon.jpg">
+        </div>
 
-        <p><h3>Wins: </h3></p>
-        <p><h3>Losses: </h3></p>
-        <p><h3>Guesses left: </h3></p>
-        <p><h3>Your guesses so far:</h3></p>
-    
-      </div>
+    </div> <!-- closing tag for title row -->
+
+    <div class="row">
+        <div id="start" class="panel col-md 12">
+            <h2>Start typing to guess!</h2>
+        </div>
     </div>
+    
+<div class="row">
+    <div id="guess-panel" class="panel border col-md-5 col-sm-12">
+        <div class="page-header">
+        <p>
+        <h3>What letter am I thinking of?</h3>
+        </p>
+        </div>
+
+        <p>
+        <h3>Your guesses so far:</h3>
+        <h3 id="userGuessed"></h3>
+        </p>
+    </div>
+  
+
+    <div id="stat-panel" class="panel col-md-5 col-sm-12 pull-right">
+        <div class="row">
+
+          <div class="col-md-6 col-sm-12">
+            <h3>Wins: </h3>
+            <h3 id ="winTracker"></h3>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+           <h3 id="losses">Losses: </h3>
+           <h3 id="lossTracker"></h3>
+          </div>
+        
+
+        </div>
+    
+
+        <p><h3>Guesses left: </h3>
+        <h3 id="numberLeft"></h3>
+        </p>
+    </div>   
+</div>
+
+</div>  <!-- closing tag for container -->
+    
 <!-- js file -->
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
